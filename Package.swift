@@ -11,12 +11,12 @@
 
 import PackageDescription
 
-let sdkVersion = "0.47.5"
+let sdkVersion = "0.63.0"
 
 let package = Package(
     name: "TomTomSDKLoggingFrameworks",
     defaultLocalization: "en",
-    platforms: [.iOS(.v13)],
+    platforms: [.iOS(.v14)],
     products: [ /* products are set later */ ],
     dependencies: [
         .package(url: "https://github.com/tomtom-international/tomtom-sdk-spm-core", exact: Version(stringLiteral: sdkVersion)),
@@ -26,7 +26,7 @@ let package = Package(
 )
 
 let modules: [Module] = [
-    Module("TomTomSDKLogConfiguration", sha: "a37a3303a81a1d969fcdc85deeb3cbafa3ac2b817f0b5a294363abc1abd92887", version: "0.47.5", dependencies: [
+    Module("TomTomSDKLogConfiguration", sha: "90e32478c09579399172018394906fe2abdc060b581218f07d6e2ef4f4cb3282", version: "0.63.0", dependencies: [
         .corePackageModule("TomTomSDKCommon"),
     ]),
 ]
