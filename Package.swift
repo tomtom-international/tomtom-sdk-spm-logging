@@ -11,7 +11,7 @@
 
 import PackageDescription
 
-let sdkVersion = "0.65.1"
+let sdkVersion = "0.67.0"
 
 let package = Package(
     name: "TomTomSDKLoggingFrameworks",
@@ -26,7 +26,7 @@ let package = Package(
 )
 
 let modules: [Module] = [
-    Module("TomTomSDKLogConfiguration", sha: "84363321d38e825cd0e9edb173af3dd33df57eec95502b113a281c78a547922d", version: "0.65.1", dependencies: [
+    Module("TomTomSDKLogConfiguration", sha: "db04687ae284456528520679a212867a0e3db8020ecc83e3aa4cb992b5ffb57d", version: "0.67.0", dependencies: [
         .corePackageModule("TomTomSDKCommon"),
     ]),
 ]
