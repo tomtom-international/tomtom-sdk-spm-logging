@@ -1,4 +1,4 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 6.0
 
 // © 2024 TomTom N.V. All rights reserved.
 //
@@ -11,12 +11,12 @@
 
 import PackageDescription
 
-let sdkVersion = "0.70.0"
+let sdkVersion = "0.71.1"
 
 let package = Package(
     name: "TomTomSDKLoggingFrameworks",
     defaultLocalization: "en",
-    platforms: [.iOS(.v14)],
+    platforms: [.iOS(.v15)],
     products: [ /* products are set later */ ],
     dependencies: [
         .package(url: "https://github.com/tomtom-international/tomtom-sdk-spm-core", exact: Version(stringLiteral: sdkVersion)),
@@ -26,7 +26,7 @@ let package = Package(
 )
 
 let modules: [Module] = [
-    Module("TomTomSDKLogConfiguration", sha: "5ab0ba845e2908545d6099d05d6cea407d684c5451172aa4f187921a4d2e60a3", version: "0.70.0", dependencies: [
+    Module("TomTomSDKLogConfiguration", sha: "373e44ed4ef19c74fe5ec2d6d76c5d13fa86d24e3e4d59c2c6e3263437e25f0a", version: "0.71.1", dependencies: [
         .corePackageModule("TomTomSDKCommon"),
     ]),
 ]
