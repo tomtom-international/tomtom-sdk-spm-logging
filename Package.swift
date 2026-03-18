@@ -11,7 +11,7 @@
 
 import PackageDescription
 
-let sdkVersion = "0.71.1"
+let sdkVersion = "0.72.0"
 
 let package = Package(
     name: "TomTomSDKLoggingFrameworks",
@@ -26,7 +26,7 @@ let package = Package(
 )
 
 let modules: [Module] = [
-    Module("TomTomSDKLogConfiguration", sha: "373e44ed4ef19c74fe5ec2d6d76c5d13fa86d24e3e4d59c2c6e3263437e25f0a", version: "0.71.1", dependencies: [
+    Module("TomTomSDKLogConfiguration", sha: "1bd721f960f704070be6ec04eb2fa234176ea013681568fa734febc88ec9547b", version: "0.72.0", dependencies: [
         .corePackageModule("TomTomSDKCommon"),
     ]),
 ]
@@ -109,7 +109,7 @@ extension ModuleDependency: ExpressibleByStringLiteral {
         self.init(name: value, package: nil)
     }
 
-    public typealias StringLiteralType = String
+    typealias StringLiteralType = String
 }
 
 extension Array where Element == Module {
