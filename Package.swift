@@ -11,7 +11,7 @@
 
 import PackageDescription
 
-let sdkVersion = "0.74.0"
+let sdkVersion = "0.71.3"
 
 let package = Package(
     name: "TomTomSDKLoggingFrameworks",
@@ -22,11 +22,11 @@ let package = Package(
         .package(url: "https://github.com/tomtom-international/tomtom-sdk-spm-core", exact: Version(stringLiteral: sdkVersion)),
     ],
     targets: [ /* targets are set later */ ],
-    swiftLanguageModes: [.v5]
+    swiftLanguageVersions: [.v5]
 )
 
 let modules: [Module] = [
-    Module("TomTomSDKLogConfiguration", sha: "b1bc2758a2e19937e65c810f183e8d4b21a678460d735cbc0a26132ac83546db", version: "0.74.0", dependencies: [
+    Module("TomTomSDKLogConfiguration", sha: "db9b25c02c25c0317b88b1f27dba689d403afca459c19c871112412a45d0c8ce", version: "0.71.3", dependencies: [
         .corePackageModule("TomTomSDKCommon"),
     ]),
 ]
@@ -109,7 +109,7 @@ extension ModuleDependency: ExpressibleByStringLiteral {
         self.init(name: value, package: nil)
     }
 
-    typealias StringLiteralType = String
+    public typealias StringLiteralType = String
 }
 
 extension Array where Element == Module {
